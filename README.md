@@ -43,7 +43,7 @@ In this GitHub repo I have not included the dataset or model as they were too la
 
 7) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
 
-8) There are 3 predictions you can make - simialrity, most similar and word association. Examples of the curl commands for each can be found below. 
+8) There are 3 predictions you can make - similarity, most similar and word association. Examples of the curl commands for each can be found below. 
 
 
 **Similarity:**
@@ -97,14 +97,14 @@ Output:
 
 ## Future improvements 
 
-- add authorisation token 
+- Add authorisation token 
 - Deploy on Heroku
 - Deploy on Docker 
 
 
 ## Sources: 
 
-- Google News data.pre-trained vectors trained on part of Google News dataset (about 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases: https://code.google.com/archive/p/word2vec/
+- Google News data: pe-trained vectors trained on a Google News dataset (~ 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases: https://code.google.com/archive/p/word2vec/
 - Gender bias article: https://towardsdatascience.com/gender-bias-word-embeddings-76d9806a0e17
 - Gensim models: https://www.shanelynn.ie/word-embeddings-in-python-with-spacy-and-gensim/
 - Flask restful APIs: https://www.statworx.com/ch/blog/how-to-build-a-machine-learning-api-with-python-and-flask/
