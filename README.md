@@ -41,7 +41,7 @@ In this GitHub repo I have not included the dataset or model as they were too la
 
 6) Run the Python command `python app.py` on your terminal. This will run the app on your local server.
 
-7) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman] (https://www.postman.com/)
+7) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
 
 8) There are 3 predictions you can make - simialrity, most similar and word association. Examples of the curl commands for each can be found below. 
 
