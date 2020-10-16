@@ -30,7 +30,7 @@ In this GitHub repo I have not included the dataset or model as they were too la
 
 2) Download the [Google News data](https://code.google.com/archive/p/word2vec/). It can be found under the section titled `Pre-trained word and phrase vectors`. The file is called `GoogleNews-vectors-negative300.bin.gz`. 
 
-3) Place the Google Newsd data in the `data` folder. 
+3) Place the Google News data in the `data` folder. 
 
 4) Run the `pickleModel.py` script. This will automatically add the model to the `models` folder. 
 
