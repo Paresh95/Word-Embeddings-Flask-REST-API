@@ -1,10 +1,6 @@
 # Word-Embeddings-Flask-REST-API
-A Flask REST API for a word embeddings model
 
-
-### Summary
-
-This Flask REST API allows you to extract predictions from a word embeddings model pre-trained on part a Google News dataset (about 100 billion words). 
+This Flask REST API allows you to extract predictions from a word embeddings model pre-trained on a Google News dataset (about 100 billion words). 
 
 The predictions you can obtain include: 
 - A similarity score between 2 words
@@ -28,7 +24,7 @@ The predictions you can obtain include:
 
 ### Set-up steps
 
-In this GitHub repo I have not included the Google News dataset or models as they were too large to upload. Please follow steps outlined to use this app.
+In this GitHub repo I have not included the dataset or model as they were too large to upload. Please follow steps outlined to use this app.
 
 1) Download the contents of this repository. 
 
