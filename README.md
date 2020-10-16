@@ -30,20 +30,22 @@ In this GitHub repo I have not included the dataset or model as they were too la
 
 2) Download the [Google News data](https://code.google.com/archive/p/word2vec/). It can be found under the section titled `Pre-trained word and phrase vectors`. The file is called `GoogleNews-vectors-negative300.bin.gz`. 
 
-3) Place the Google News data in the `data` folder. 
+3) Place the Google News data in a folder called `data`. 
 
-4) Run the `pickleModel.py` script. This will automatically add the model to the `models` folder. 
+4) Create an empty folder called `models`. 
+
+5) Run the `pickleModel.py` script. This will automatically add the model to the `models` folder. 
 
 
 ### How to use
  
-5) `cd` into the `Word-Embeddings-Flask-REST-API` folder on your terminal. 
+6) `cd` into the `Word-Embeddings-Flask-REST-API` folder on your terminal. 
 
-6) Run the Python command `python app.py` on your terminal. This will run the app on your local server.
+7) Run the Python command `python app.py` on your terminal. This will run the app on your local server.
 
-7) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
+8) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
 
-8) There are 3 predictions you can make - similarity, most similar and word association. Examples of the curl commands for each can be found below. 
+9) There are 3 predictions you can make - similarity, most similar and word association. Examples of the curl commands for each can be found below. 
 
 
 **Similarity:**
