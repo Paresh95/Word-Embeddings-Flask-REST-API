@@ -13,13 +13,13 @@ The predictions you can obtain include:
 
 ```
 ~/Word-Embeddings-Flask-REST-API
-    |-- pickleModel.py # python file to pickle the trained model
-    |-- app.py # python file containing the flask app
-    |-- predict.py # python file containing helper functions to make predictions
+    |-- pickleModel.py #python file to pickle the trained model
+    |-- app.py #python file containing the flask app
+    |-- predict.py #python file containing helper functions to make predictions
     |-- /data
     |-- /models
     |-- /test
-        |-- practice.ipynb # Notebook file used for testing/practice
+        |-- practice.ipynb #notebook file used for testing/practice
 ```
 
 ### Set-up steps
