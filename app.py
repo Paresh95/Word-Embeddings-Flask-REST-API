@@ -1,6 +1,5 @@
-from gensim.models import KeyedVectors
 from flask import Flask
-from flask_restful import Api, Resource, reqparse
+from flask_restful import Api
 from predict import Similarity, mostSimilar, wordAssociation
 
 app = Flask(__name__)
