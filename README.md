@@ -111,7 +111,7 @@ Output:
 5) Follow the steps 3 & 4 in the previous section `How to use without Docker` to use the API. 
 
 
-NOTE: You can also link Docker Hub with your GitHub to automaically push any changes to build a new image. If so, this will replace steps 3 & 4.  
+NOTE: You can also link Docker Hub with your GitHub to automatically push any changes to build a new image. If so, this will replace steps 3 & 4.  
 
 
 ## Appendix
