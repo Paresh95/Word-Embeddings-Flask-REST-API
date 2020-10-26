@@ -16,6 +16,8 @@ The predictions you can obtain include:
     |-- pickleModel.py #python file to pickle the trained model
     |-- app.py #python file containing the flask app
     |-- predict.py #python file containing helper functions to make predictions
+    |-- Dockerfile #a list of instructions to build a Docker container
+    |-- requirements.txt #a list of python modules to be installed in a Docker container
     |-- /data
     |-- /models
     |-- /test
@@ -37,15 +39,15 @@ In this GitHub repo I have not included the dataset or model as they were too la
 5) Run the `pickleModel.py` script. This will automatically add the model to the `models` folder. 
 
 
-### How to use
+### How to use without Docker
  
-6) `cd` into the `Word-Embeddings-Flask-REST-API` folder on your terminal. 
+1) `cd` into the `Word-Embeddings-Flask-REST-API` folder on your terminal. 
 
-7) Run the Python command `python app.py` on your terminal. This will run the app on your local server.
+2) Run the Python command `python app.py` on your terminal. This will run the app on your local server.
 
-8) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
+3) To call the API use the `requests` module in Python, `curl` command on your terminal or use a platform for testing APIs such as [Postman](https://www.postman.com/)
 
-9) There are 3 predictions you can make - similarity, most similar and word association. Examples of the curl commands for each can be found below. 
+4) There are 3 predictions you can make - similarity, most similar and word association. Examples of the curl commands for each can be found below. 
 
 
 **Similarity:**
@@ -96,12 +98,49 @@ Output:
 {"Prediction": "[('gynecologist', 0.7093892097473145), ('nurse', 0.647728681564331), ('doctors', 0.6471461057662964), ('physician', 0.64389967918396), ('pediatrician', 0.6249487996101379), ('nurse_practitioner', 0.6218314170837402), ('obstetrician', 0.6072014570236206), ('ob_gyn', 0.5986712574958801), ('midwife', 0.5927063226699829), ('dermatologist', 0.5739566087722778)]"}
 ```
 
+### How to use with Docker
+
+1) `cd` into the `Word-Embeddings-Flask-REST-API` folder on your terminal. 
+
+2) Install [Docker](https://docs.docker.com/get-docker/)
+
+3) On your terminal run `docker build -t word-embedding-api .`. This tells Docker to build a container called 'word-embedding-api' from set of instructions in the Dockerfile which resides in the current working directory. 
+
+4) Next run `docker run -p 5000:5000 word-embedding-api`. This runs your container on your local server and forwards the request from port 5000 on the host (your computer) to port 5000 in the container. 
+
+5) Follow the steps 3 & 4 in the previous section `How to use without Docker` to use the API. 
+
+
+NOTE YOU CAN USE DOCKERHUB TO PUSH CHANGES AUTOMATICALLLY FROM GUTHUB TO BUILD YOUR CONTAINER - MEANS YOU DONT HAVE TO DO STEPS 3 & 4 
+
+
+
+## Appendix
+
+### Explaination of the Dockerfile 
+```
+FROM python:3.8.3
+WORKDIR /project
+ADD . /project
+RUN pip3 -q install pip --upgrade
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "5000"]
+```
+
+- `FROM` defines the base image. This image can be found on [Docker Hub](https://hub.docker.com/).
+- `WORKDIR` creates a work directory called project where the "present working directory" will be set.
+- `ADD . /project` adds files from the current working directory to the folder we created in the previous step. 
+- `RUN pip3 -q install pip --upgrade` upgrades the version on pip we use to the latest version
+- `RUN pip install -r requirements.txt` installs the required Python modules in the container. 
+- `EXPOSE 5000` lets us forward the request from port 5000 on the host to port 5000 in the container. 
+- `CMD ["flask", "run", "-h", "0.0.0.0", "-p", "5000"]` runs the Flask app on host `0.0.0.0` and port `5000`
+
 
 ## Future improvements 
 
 - Add authorisation token 
 - Deploy on Heroku
-- Deploy on Docker 
 
 
 ## Sources: 
@@ -112,3 +151,4 @@ Output:
 - Flask restful APIs: https://www.statworx.com/ch/blog/how-to-build-a-machine-learning-api-with-python-and-flask/
 - Flask authorisation token: https://dev.to/paurakhsharma/flask-rest-api-part-3-authentication-and-authorization-5935
 - Deploying a flask app to Heroku: https://stackabuse.com/deploying-a-flask-application-to-heroku/
+- Creating a Docker container: https://www.youtube.com/watch?v=YFl2mCHdv24&ab_channel=JakeWright
