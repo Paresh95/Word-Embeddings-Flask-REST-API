@@ -28,7 +28,7 @@ The predictions you can obtain include:
 
 In this GitHub repo I have not included the dataset or model as they were too large to upload. Please follow steps outlined to obtain them before using this app.
 
-1) Download the contents of this GitHub repository. 
+1) Download the contents of this GitHub repository
 
 2) Download the [Google News data](https://code.google.com/archive/p/word2vec/). It can be found under the section titled `Pre-trained word and phrase vectors`. The file is called `GoogleNews-vectors-negative300.bin.gz`. 
 
