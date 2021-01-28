@@ -5,7 +5,7 @@ This Flask REST API allows you to extract predictions from a word embeddings mod
 The predictions you can obtain include: 
 - A similarity score between 2 words
 - The top 10 most similar words and scores for a given word
-- The top 10 word associations and scores for a new word given the vector association between two other words e.g. e.g. man is to doctor as women is to...
+- The top 10 word associations and scores for a new word given the vector association between two other words e.g. man is to doctor as women is to...
          
 
 
