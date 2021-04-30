@@ -30,7 +30,7 @@ In this GitHub repo I have not included the dataset or model as they were too la
 
 1) Download the contents of this GitHub repository
 
-2) Download the [Google News data](https://code.google.com/archive/p/word2vec/). It can be found under the section titled `Pre-trained word and phrase vectors`. The file is called `GoogleNews-vectors-negative300.bin.gz`. 
+2) Download the [Google News data - GoogleNews-vectors-negative300.bin.gz](https://code.google.com/archive/p/word2vec/). It can be found under the section titled `Pre-trained word and phrase vectors`. The file is called `GoogleNews-vectors-negative300.bin.gz`. 
 
 3) Place the Google News data in a folder called `data`. 
 
